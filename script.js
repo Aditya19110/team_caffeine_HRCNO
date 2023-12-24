@@ -22,7 +22,7 @@ function updateTimer() {
 }
 
 function playSound() {
-    const audio = new Audio('notification.mp3'); 
+    const audio = new Audio('notification.mp3'); // Replace 'notification.mp3' with your sound file
     audio.play();
 }
 
@@ -133,13 +133,13 @@ function toggleTheme() {
     const isDarkMode = document.body.classList.contains('theme-dark');
     const newTheme = isDarkMode ? 'theme-light' : 'theme-dark';
 
-    document.body.classList.replace(isDarkMode ? 'theme-dark' : 'theme-light', newTheme);
+    document.body.classList.replace(isDarkMode ? 'theme-dark' : 'theme-light', isDarkMode ? 'theme-light' : 'theme-dark');
     localStorage.setItem('theme', newTheme);
     updateThemeToggleBtnText();
     
-    
-    applyColorThemes(isDarkMode);
+    applyColorThemes(!isDarkMode); 
 }
+
 
 function applyColorThemes(isDarkMode) {
     const body = document.body;
@@ -149,14 +149,14 @@ function applyColorThemes(isDarkMode) {
     const footer = document.querySelector('footer');
 
     if (isDarkMode) {
-        
+        // Dark mode color themes
         body.style.background = 'linear-gradient(45deg, #2c3e50, #34495e)';
         header.style.backgroundColor = '#3a1a4d';
         timerContainer.style.backgroundColor = 'rgba(138, 109, 182, 0.8)';
         button.style.backgroundColor = '#39b54a';
         footer.style.backgroundColor = '#6373cf';
     } else {
-       
+        // Light mode color themes
         body.style.background = 'linear-gradient(45deg, #f0f0f0, #e0e0e0)';
         header.style.backgroundColor = '#e74c3c';
         timerContainer.style.backgroundColor = 'rgba(223, 230, 233, 0.8)';
