@@ -1,0 +1,113 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(45deg, #3a1a4d, #8a6db6);
+    color: #fff;
+    margin: 0;
+    transition: background 0.5s, color 0.5s;
+}
+
+body.theme-dark {
+    background-color: #2c3e50;
+}
+
+header, footer {
+    transition: background-color 0.5s, color 0.5s;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3a1a4d;
+    color: #fff;
+    padding: 15px;
+}
+
+#themeToggleBtn {
+    background-color: #39b54a;
+    color: #fff;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%; /* Circular button */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#themeToggleBtn:hover {
+    background-color: #2d7e3a;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100vh;
+}
+
+.timer-container, .session-container {
+    text-align: center;
+    background-color: rgba(138, 109, 182, 0.8);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.5s;
+    width: 80%;
+    margin: 20px auto;
+    overflow: auto;
+    backdrop-filter: blur(10px);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+input {
+    width: 60px;
+    margin-right: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#timer, #break-timer {
+    background-color: #9d1396;
+    font-size: 4rem;
+    color: #44d393;
+    border: 2px solid #000;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 30px;
+}
+
+button {
+    background-color: #15b6f0;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #1286a8;
+}
+
+footer {
+    background-color: #6373cf;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid #fff;
+}
+
+#work-timer h2, #break-timer h2 {
+    color: #000000;
+}
