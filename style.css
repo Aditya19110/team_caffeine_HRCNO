@@ -29,7 +29,7 @@ header {
     padding: 15px 20px;
     border: none;
     cursor: pointer;
-    border-radius: 50%; /* Circular button */
+    border-radius: 50%;
     transition: background-color 0.3s, color 0.3s;
 }
 
