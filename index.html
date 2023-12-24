@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Pomodoro Time Management</h1>
+        <button id="themeToggleBtn" onclick="toggleTheme()" aria-label="Toggle Theme">Toggle Theme</button>
+    </header>
+
+    <div class="container">
+        <div class="timer-container">
+            <div>
+                <label for="work-minutes">Work Time (minutes):</label>
+                <input type="number" id="work-minutes" min="0" value="25">
+                <label for="work-seconds">Work Time (seconds):</label>
+                <input type="number" id="work-seconds" min="0" max="59" value="0">
+            </div>
+
+            <div>
+                <label for="break-minutes">Break Time (minutes):</label>
+                <input type="number" id="break-minutes" min="0" value="5">
+                <label for="break-seconds">Break Time (seconds):</label>
+                <input type="number" id="break-seconds" min="0" max="59" value="0">
+            </div>
+
+            <div id="work-timer">
+                <h2>Work Time</h2>
+                <div id="timer">25:00</div>
+            </div>
+
+            <div id="break-timer" style="display: none;">
+                <h2>Break Time</h2>
+                <div id="break-timer-display">5:00</div>
+            </div>
+
+            <button id="startBtn" onclick="startPomodoro()" aria-label="Start Pomodoro">Start</button>
+            <button id="resetBtn" onclick="resetPomodoro()" aria-label="Reset Pomodoro">Reset</button>
+        </div>
+
+        <div class="session-container">
+            <div class="session-history">
+                <h2>Session History</h2>
+                <ol id="history-list"></ol>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Team Caffeine | <a href="https://github.com/yourusername/yourproject" target="_blank">GitHub</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
